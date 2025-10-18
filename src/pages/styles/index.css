@@ -1,0 +1,98 @@
+body {
+    font-family: workbench, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    font-size: 12rem;
+    font-weight: 400;
+    left: 0;
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
+}
+
+#descriptor0 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#descriptor1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#descriptors {
+    padding-left: 1rem;
+    text-align: left;
+}
+
+#container {
+    width: 90%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(50%);
+    margin-left: 4rem;
+}
+
+#btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-left: 1rem;
+}
+
+#container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#btn1 {
+    transform: translateY(-25%);
+    margin-right: 0.5rem;
+}
+
+#btn2 {
+    transform: translateY(-25%);
+    margin-left: 0.5rem;
+}
+
+#btn3 {
+    transform: translateY(-25%);
+    margin-left: 0.5rem;
+}
+
+#btn1, #btn2, #btn3 {
+    width: 5rem;
+}
+
+@media (max-width: 750px) {
+    #title {
+        font-size: 6rem;
+    }
+    #descriptor0 {
+        font-size: 14px;
+    }
+    #descriptor1 {
+        font-size: 14px;
+    }
+    #container {
+        width: 95%;
+        margin-left: 1rem;
+    }
+    #btn1, #btn2, #btn3 {
+        width: 4rem;
+        font-size: 14px;
+        height: 2rem;
+    }
+    #btns {
+        padding-top: 1rem;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    #container2 {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
