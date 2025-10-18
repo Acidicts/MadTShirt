@@ -2,13 +2,13 @@
 
 Music stuff :P
 
-*M*elody
-*a*rticulation
-*d*ynamics
+- *M*elody
+- *a*rticulation
+- *d*ynamics
 
-*T*empo
-*S*tructure
-*h*armony
-*i*nstruments
-*r*hythm
-*t*exture
+- *T*empo
+- *S*tructure
+- *h*armony
+- *i*nstruments
+- *r*hythm
+- *t*exture
