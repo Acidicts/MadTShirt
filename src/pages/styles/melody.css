@@ -35,33 +35,6 @@ body {
     color: white;
 }
 
-nav {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin: 1rem;
-}
-
-li {
-    display: inline;
-    margin-right: 1rem;
-    border: 2px solid black;
-    border-radius: 0.25rem;
-    padding: 0.5rem 1rem;
-    background-color: var(--col_8-accent);
-    transition: all ease-in-out 0.2s;
-    font-weight: 500;
-}
-
-li:hover {
-    background-color: var(--col_4-accent);
-    cursor: pointer;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
 #container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));

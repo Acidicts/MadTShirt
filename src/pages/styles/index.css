@@ -136,6 +136,10 @@ footer a:hover {
         color: #000000;
         text-shadow: aliceblue 0 0 15px;
     }
+    footer {
+        margin-top: 15rem;
+        padding-bottom: auto;
+    }
 }
 
 @media (max-width: 270px){
