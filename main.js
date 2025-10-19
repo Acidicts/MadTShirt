@@ -20,6 +20,10 @@ app.get('/articulation', (req, res) => {
     res.sendFile(__dirname + '/src/pages/articulation.html');
 });
 
+app.get('/dynamics', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/dynamics.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamics</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/dynamics.css">
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/load.js"></script>
+
+</head>
+<body>
+    <nav>
+        <li onclick="window.location.href='/'">Home</li>
+    </nav>
+
+    <div class="page-header">
+        <h1>Dynamics</h1>
+        <p class="page-description">How loud or soft music is played. An important part of performing music expressively.</p>
+    </div>
+
+    <div id="container">
+        <!-- Fortissimo -->
+        <div class="container dynamic-card" id="fortissimo">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text ff">ff</text>
+                    <!-- Sound waves -->
+                    <path d="M 10 40 Q 15 20, 20 40 T 30 40" class="wave wave1" />
+                    <path d="M 10 40 Q 15 60, 20 40 T 30 40" class="wave wave1" />
+                    <path d="M 90 40 Q 95 20, 100 40 T 110 40" class="wave wave1" />
+                    <path d="M 90 40 Q 95 60, 100 40 T 110 40" class="wave wave1" />
+                </svg>
+            </div>
+            <p class="header">Fortissimo</p>
+            <p class="descriptor">VERY LOUD</p>
+            <div class="notation-tag">ff</div>
+        </div>
+
+        <!-- Forte -->
+        <div class="container dynamic-card" id="forte">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text f">f</text>
+                    <!-- Sound waves -->
+                    <path d="M 15 40 Q 20 25, 25 40 T 35 40" class="wave wave2" />
+                    <path d="M 15 40 Q 20 55, 25 40 T 35 40" class="wave wave2" />
+                    <path d="M 85 40 Q 90 25, 95 40 T 105 40" class="wave wave2" />
+                    <path d="M 85 40 Q 90 55, 95 40 T 105 40" class="wave wave2" />
+                </svg>
+            </div>
+            <p class="header">Forte</p>
+            <p class="descriptor">LOUD</p>
+            <div class="notation-tag">f</div>
+        </div>
+
+        <!-- Mezzo-forte -->
+        <div class="container dynamic-card" id="mezzo-forte">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text mf">mf</text>
+                    <!-- Sound waves -->
+                    <path d="M 20 40 Q 23 30, 26 40 T 32 40" class="wave wave3" />
+                    <path d="M 20 40 Q 23 50, 26 40 T 32 40" class="wave wave3" />
+                    <path d="M 88 40 Q 91 30, 94 40 T 100 40" class="wave wave3" />
+                    <path d="M 88 40 Q 91 50, 94 40 T 100 40" class="wave wave3" />
+                </svg>
+            </div>
+            <p class="header">Mezzo-forte</p>
+            <p class="descriptor">Fairly Loud</p>
+            <div class="notation-tag">mf</div>
+        </div>
+
+        <!-- Mezzo-piano -->
+        <div class="container dynamic-card" id="mezzo-piano">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text mp">mp</text>
+                    <!-- Sound waves -->
+                    <path d="M 25 40 Q 27 35, 29 40 T 33 40" class="wave wave4" />
+                    <path d="M 25 40 Q 27 45, 29 40 T 33 40" class="wave wave4" />
+                    <path d="M 87 40 Q 89 35, 91 40 T 95 40" class="wave wave4" />
+                    <path d="M 87 40 Q 89 45, 91 40 T 95 40" class="wave wave4" />
+                </svg>
+            </div>
+            <p class="header">Mezzo-piano</p>
+            <p class="descriptor">Fairly Soft</p>
+            <div class="notation-tag">mp</div>
+        </div>
+
+        <!-- Piano -->
+        <div class="container dynamic-card" id="piano">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text p">p</text>
+                    <!-- Sound waves -->
+                    <path d="M 30 40 Q 31 37, 32 40 T 34 40" class="wave wave5" />
+                    <path d="M 30 40 Q 31 43, 32 40 T 34 40" class="wave wave5" />
+                    <path d="M 86 40 Q 87 37, 88 40 T 90 40" class="wave wave5" />
+                    <path d="M 86 40 Q 87 43, 88 40 T 90 40" class="wave wave5" />
+                </svg>
+            </div>
+            <p class="header">Piano</p>
+            <p class="descriptor">Soft</p>
+            <div class="notation-tag">p</div>
+        </div>
+
+        <!-- Pianissimo -->
+        <div class="container dynamic-card" id="pianissimo">
+            <div class="dynamic-symbol">
+                <svg viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+                    <text x="60" y="55" text-anchor="middle" class="dynamic-text pp">pp</text>
+                    <!-- Sound waves -->
+                    <path d="M 35 40 Q 35.5 39, 36 40 T 37 40" class="wave wave6" />
+                    <path d="M 35 40 Q 35.5 41, 36 40 T 37 40" class="wave wave6" />
+                    <path d="M 83 40 Q 83.5 39, 84 40 T 85 40" class="wave wave6" />
+                    <path d="M 83 40 Q 83.5 41, 84 40 T 85 40" class="wave wave6" />
+                </svg>
+            </div>
+            <p class="header">Pianissimo</p>
+            <p class="descriptor">Very Soft</p>
+            <div class="notation-tag">pp</div>
+        </div>
+
+        <!-- Crescendo -->
+        <div class="container dynamic-card wide-card" id="crescendo">
+            <div class="dynamic-symbol crescendo-symbol">
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Crescendo symbol -->
+                    <path d="M 30 30 L 170 50 L 30 70 Z" fill="none" stroke="currentColor" stroke-width="3" class="cresc-line"/>
+                    <!-- Animated waves getting larger -->
+                    <circle cx="40" cy="50" r="3" class="cresc-circle c1" />
+                    <circle cx="70" cy="50" r="5" class="cresc-circle c2" />
+                    <circle cx="100" cy="50" r="7" class="cresc-circle c3" />
+                    <circle cx="130" cy="50" r="9" class="cresc-circle c4" />
+                    <circle cx="160" cy="50" r="11" class="cresc-circle c5" />
+                </svg>
+            </div>
+            <p class="header">Crescendo</p>
+            <p class="descriptor">Gradually getting louder</p>
+            <div class="notation-visual">
+                <span class="volume-arrow">→</span>
+                <span class="volume-text">Increasing Volume</span>
+            </div>
+        </div>
+
+        <!-- Diminuendo -->
+        <div class="container dynamic-card wide-card" id="diminuendo">
+            <div class="dynamic-symbol diminuendo-symbol">
+                <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Diminuendo symbol -->
+                    <path d="M 30 50 L 170 30 L 170 70 Z" fill="none" stroke="currentColor" stroke-width="3" class="dim-line"/>
+                    <!-- Animated waves getting smaller -->
+                    <circle cx="40" cy="50" r="11" class="dim-circle d1" />
+                    <circle cx="70" cy="50" r="9" class="dim-circle d2" />
+                    <circle cx="100" cy="50" r="7" class="dim-circle d3" />
+                    <circle cx="130" cy="50" r="5" class="dim-circle d4" />
+                    <circle cx="160" cy="50" r="3" class="dim-circle d5" />
+                </svg>
+            </div>
+            <p class="header">Diminuendo</p>
+            <p class="descriptor">Gradually getting softer</p>
+            <div class="notation-visual">
+                <span class="volume-arrow">→</span>
+                <span class="volume-text">Decreasing Volume</span>
+            </div>
+        </div>
+
+        <!-- Info Cards -->
+        <div class="container info-card" id="placement-info">
+            <div class="info-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="30" width="80" height="3" fill="currentColor" opacity="0.3"/>
+                    <rect x="10" y="40" width="80" height="3" fill="currentColor" opacity="0.3"/>
+                    <rect x="10" y="50" width="80" height="3" fill="currentColor" opacity="0.3"/>
+                    <rect x="10" y="60" width="80" height="3" fill="currentColor" opacity="0.3"/>
+                    <rect x="10" y="70" width="80" height="3" fill="currentColor" opacity="0.3"/>
+                    <!-- Notes -->
+                    <circle cx="30" cy="50" r="6" fill="currentColor"/>
+                    <circle cx="50" cy="40" r="6" fill="currentColor"/>
+                    <circle cx="70" cy="60" r="6" fill="currentColor"/>
+                    <!-- Dynamic marking below -->
+                    <text x="50" y="90" text-anchor="middle" font-size="16" font-weight="bold" font-style="italic" fill="currentColor">mf</text>
+                    <!-- Arrow pointing to placement -->
+                    <path d="M 50 82 L 50 75" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)"/>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                            <polygon points="0 0, 10 5, 0 10" fill="currentColor" />
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <p class="header">Placement on Score</p>
+            <p class="descriptor">On a musical score the dynamic markings are always placed <strong>UNDERNEATH</strong> the stave.</p>
+        </div>
+
+        <div class="container info-card" id="extreme-dynamics">
+            <div class="info-icon">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Extreme fff -->
+                    <text x="20" y="40" font-size="20" font-weight="bold" font-style="italic" fill="currentColor" opacity="0.8">fff</text>
+                    <!-- Extreme ppp -->
+                    <text x="60" y="70" font-size="12" font-weight="bold" font-style="italic" fill="currentColor" opacity="0.8">ppp</text>
+                    <!-- Radiating lines for emphasis -->
+                    <line x1="30" y1="25" x2="30" y2="15" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                    <line x1="25" y1="27" x2="20" y2="20" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                    <line x1="35" y1="27" x2="40" y2="20" stroke="currentColor" stroke-width="2" opacity="0.6"/>
+                    <!-- Tiny waves for ppp -->
+                    <path d="M 65 75 Q 66 74, 67 75" stroke="currentColor" stroke-width="1" fill="none" opacity="0.4"/>
+                </svg>
+            </div>
+            <p class="header">Extreme Dynamics</p>
+            <p class="descriptor">Sometimes composers place extreme dynamic markings on a score to express that they want the music to be played as loud or as soft as is humanly possible!</p>
+            <div class="extreme-examples">
+                <span class="extreme-mark">fff, ffff</span>
+                <span class="extreme-mark">ppp, pppp</span>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
