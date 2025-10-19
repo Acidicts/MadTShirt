@@ -4,9 +4,35 @@
 
 body {
     margin: 0;
-    padding: 1rem;
+    padding: 0;
     background: linear-gradient(135deg, var(--col_1) 0%, var(--col_3) 100%);
     min-height: 100vh;
+}
+
+.page-header {
+    background: linear-gradient(135deg, var(--col_1), var(--col_3));
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.1rem;
+    color: white;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    opacity: 1;
+    font-weight: 400;
+    color: white;
 }
 
 nav {
@@ -15,7 +41,7 @@ nav {
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    margin: 1rem;
 }
 
 li {
