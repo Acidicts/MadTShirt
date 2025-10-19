@@ -48,6 +48,14 @@ app.get('/rhythm', (req, res) => {
     res.sendFile(__dirname + '/src/pages/rhythm.html');
 });
 
+app.get('/tempo', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/tempo.html');
+});
+
+app.get('/time-signature', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/time-signature.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content

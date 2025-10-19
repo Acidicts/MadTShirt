@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/tempo.css">
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/load.js"></script>
+
+</head>
+<body>
+    <nav>
+        <li onclick="window.location.href='/'">Home</li>
+    </nav>
+
+    <div id="container">
+        <!-- Main Tempo Definition -->
+        <div class="container section-header" id="tempo-header">
+            <h1>Tempo</h1>
+            <p>TEMPO means how fast or slow a piece of music is — it is the speed of music</p>
+        </div>
+
+        <!-- Largo -->
+        <div class="container" id="largo">
+            <p class="header">Largo</p>
+            <p class="descriptor">Slowly and broadly</p>
+            <p class="bpm">40 - 60 B.P.M.</p>
+        </div>
+
+        <!-- Adagio -->
+        <div class="container" id="adagio">
+            <p class="header">Adagio</p>
+            <p class="descriptor">Slowly (but not as slow as largo)</p>
+            <p class="bpm">60 - 75 B.P.M.</p>
+        </div>
+
+        <!-- Andante -->
+        <div class="container" id="andante">
+            <p class="header">Andante</p>
+            <p class="descriptor">At a walking pace</p>
+            <p class="bpm">75 - 105 B.P.M.</p>
+        </div>
+
+        <!-- Moderato -->
+        <div class="container" id="moderato">
+            <p class="header">Moderato</p>
+            <p class="descriptor">At a moderate pace</p>
+            <p class="bpm">105 - 120 B.P.M.</p>
+        </div>
+
+        <!-- Allegro -->
+        <div class="container" id="allegro">
+            <p class="header">Allegro</p>
+            <p class="descriptor">Quite fast</p>
+            <p class="bpm">120 - 155 B.P.M.</p>
+        </div>
+
+        <!-- Vivace -->
+        <div class="container" id="vivace">
+            <p class="header">Vivace</p>
+            <p class="descriptor">Quick and lively</p>
+            <p class="bpm">155 - 175 B.P.M.</p>
+        </div>
+
+        <!-- Presto -->
+        <div class="container" id="presto">
+            <p class="header">Presto</p>
+            <p class="descriptor">Very fast</p>
+            <p class="bpm">175 - 200 B.P.M.</p>
+        </div>
+
+        <!-- Tempo Markings Placement -->
+        <div class="container info-card" id="tempo-placement">
+            <p class="header">Tempo Markings</p>
+            <p class="descriptor">Tempo markings are placed at the start of the score above the stave</p>
+            <div class="notation-example">
+                <svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tempo marking above staff -->
+                    <text x="20" y="30" font-size="18" font-weight="600" font-style="italic" fill="#333">Allegro</text>
+                    
+                    <!-- Staff lines -->
+                    <line x1="20" y1="50" x2="380" y2="50" stroke="#333" stroke-width="1.5"/>
+                    <line x1="20" y1="60" x2="380" y2="60" stroke="#333" stroke-width="1.5"/>
+                    <line x1="20" y1="70" x2="380" y2="70" stroke="#333" stroke-width="1.5"/>
+                    <line x1="20" y1="80" x2="380" y2="80" stroke="#333" stroke-width="1.5"/>
+                    <line x1="20" y1="90" x2="380" y2="90" stroke="#333" stroke-width="1.5"/>
+                    
+                    <!-- Treble clef -->
+                    <text x="30" y="85" font-size="60" font-family="serif" fill="#333">𝄞</text>
+                    
+                    <!-- Some notes -->
+                    <ellipse cx="120" cy="70" rx="7" ry="5" fill="#333" transform="rotate(-20 120 70)"/>
+                    <rect x="127" y="45" width="2" height="25" fill="#333"/>
+                    
+                    <ellipse cx="160" cy="80" rx="7" ry="5" fill="#333" transform="rotate(-20 160 80)"/>
+                    <rect x="167" y="55" width="2" height="25" fill="#333"/>
+                    
+                    <ellipse cx="200" cy="60" rx="7" ry="5" fill="#333" transform="rotate(-20 200 60)"/>
+                    <rect x="207" y="35" width="2" height="25" fill="#333"/>
+                    
+                    <!-- Arrow pointing to tempo marking -->
+                    <path d="M 80 35 L 65 25" stroke="var(--col_3)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_3)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Section Header: Tempo Changes -->
+        <div class="container section-header" id="tempo-changes-header">
+            <h2>Tempo Changes</h2>
+            <p>Terms which indicate a change in tempo during a piece</p>
+        </div>
+
+        <!-- Accelerando -->
+        <div class="container" id="accelerando">
+            <p class="header">Accelerando</p>
+            <p class="descriptor">Gradually speeding up</p>
+            <div class="tempo-change-visual">
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Visual representation of speeding up -->
+                    <line x1="20" y1="40" x2="180" y2="40" stroke="#ddd" stroke-width="2"/>
+                    <circle cx="30" cy="40" r="6" fill="var(--col_1)" class="accel-1"/>
+                    <circle cx="55" cy="40" r="6" fill="var(--col_2)" class="accel-2"/>
+                    <circle cx="75" cy="40" r="6" fill="var(--col_3)" class="accel-3"/>
+                    <circle cx="90" cy="40" r="6" fill="var(--col_4)" class="accel-4"/>
+                    <circle cx="102" cy="40" r="6" fill="var(--col_5)" class="accel-5"/>
+                    <text x="100" y="65" text-anchor="middle" font-size="12" fill="#666">Getting faster →</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Ritardando/Rallentando -->
+        <div class="container" id="ritardando">
+            <p class="header">Ritardando / Rallentando</p>
+            <p class="descriptor">Gradually slowing down</p>
+            <div class="tempo-change-visual">
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Visual representation of slowing down -->
+                    <line x1="20" y1="40" x2="180" y2="40" stroke="#ddd" stroke-width="2"/>
+                    <circle cx="30" cy="40" r="6" fill="var(--col_1)" class="rit-1"/>
+                    <circle cx="42" cy="40" r="6" fill="var(--col_2)" class="rit-2"/>
+                    <circle cx="57" cy="40" r="6" fill="var(--col_3)" class="rit-3"/>
+                    <circle cx="77" cy="40" r="6" fill="var(--col_4)" class="rit-4"/>
+                    <circle cx="102" cy="40" r="6" fill="var(--col_5)" class="rit-5"/>
+                    <text x="100" y="65" text-anchor="middle" font-size="12" fill="#666">Getting slower →</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Ritenuto -->
+        <div class="container" id="ritenuto">
+            <p class="header">Ritenuto</p>
+            <p class="descriptor">A sudden slowing down</p>
+            <div class="tempo-change-visual">
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Visual representation of sudden slowing -->
+                    <line x1="20" y1="40" x2="180" y2="40" stroke="#ddd" stroke-width="2"/>
+                    <circle cx="30" cy="40" r="6" fill="var(--col_1)" class="rit-sudden-1"/>
+                    <circle cx="50" cy="40" r="6" fill="var(--col_2)" class="rit-sudden-2"/>
+                    <circle cx="70" cy="40" r="6" fill="var(--col_3)" class="rit-sudden-3"/>
+                    <!-- Sudden jump in spacing -->
+                    <circle cx="110" cy="40" r="6" fill="var(--col_4)" class="rit-sudden-4"/>
+                    <circle cx="150" cy="40" r="6" fill="var(--col_5)" class="rit-sudden-5"/>
+                    <text x="100" y="65" text-anchor="middle" font-size="12" fill="#666">Sudden slow down</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Rubato -->
+        <div class="container" id="rubato">
+            <p class="header">Rubato</p>
+            <p class="descriptor">A highly expressive technique where a performer plays with flexible tempo</p>
+            <div class="tempo-change-visual">
+                <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Visual representation of flexible tempo -->
+                    <path d="M 20 40 Q 40 25 60 40 T 100 40 T 140 40 T 180 40" stroke="var(--col_3)" stroke-width="3" fill="none" class="rubato-wave"/>
+                    <circle cx="30" cy="35" r="5" fill="var(--col_1)" class="rubato-1"/>
+                    <circle cx="50" cy="45" r="5" fill="var(--col_2)" class="rubato-2"/>
+                    <circle cx="70" cy="35" r="5" fill="var(--col_3)" class="rubato-3"/>
+                    <circle cx="90" cy="42" r="5" fill="var(--col_4)" class="rubato-4"/>
+                    <circle cx="110" cy="38" r="5" fill="var(--col_5)" class="rubato-5"/>
+                    <text x="100" y="70" text-anchor="middle" font-size="12" fill="#666">Flexible tempo</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- BPM Explanation -->
+        <div class="container info-card full-width" id="bpm-info">
+            <p class="header">B.P.M. (Beats Per Minute)</p>
+            <p class="descriptor">The tempo of a piece of music is most commonly indicated in two ways:</p>
+            <div class="bpm-explanation">
+                <div class="bpm-method">
+                    <div class="method-icon">🇮🇹</div>
+                    <h3>Italian Term</h3>
+                    <p>Traditional tempo markings in Italian (e.g., Allegro, Andante, Presto)</p>
+                </div>
+                <div class="bpm-method">
+                    <div class="method-icon">🎵</div>
+                    <h3>Beats Per Minute</h3>
+                    <p>A numerical indication of how many beats occur in one minute (e.g., ♩ = 120)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
