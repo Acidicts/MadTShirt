@@ -28,6 +28,14 @@ app.get('/texture', (req, res) => {
     res.sendFile(__dirname + '/src/pages/texture.html');
 });
 
+app.get('/texture', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/texture.html');
+});
+
+app.get('/structure', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/structure.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content

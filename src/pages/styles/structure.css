@@ -97,11 +97,6 @@ li:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
-.texture-card {
-    position: relative;
-    overflow: hidden;
-}
-
 .header {
     font-size: 1.75rem;
     font-weight: 700;
@@ -119,128 +114,143 @@ li:hover {
     line-height: 1.5;
 }
 
-/* SVG Texture Symbols */
-.texture-symbol {
+/* Section card (pop song structure) */
+.section-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 250, 255, 0.95));
+    border: 3px solid var(--col_3);
+    min-height: 200px;
+}
+
+.section-icon {
     width: 200px;
     height: 120px;
     margin-bottom: 1rem;
 }
 
-.texture-symbol svg {
+.section-icon svg {
     width: 100%;
     height: 100%;
 }
 
-.motion-symbol {
-    width: 250px;
+/* Structure cards */
+.structure-card {
+    position: relative;
+}
+
+.structure-icon {
+    width: 150px;
     height: 100px;
+    margin-bottom: 1rem;
 }
 
-/* Animations for texture lines */
-.single-line {
-    animation: flow 3s ease-in-out infinite;
+.structure-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes flow {
-    0%, 100% { stroke-dashoffset: 0; }
-    50% { stroke-dashoffset: 10; }
+/* Form cards */
+.form-card {
+    position: relative;
 }
 
-.poly-line {
-    animation: weave 4s ease-in-out infinite;
+.form-icon {
+    width: 180px;
+    height: 100px;
+    margin-bottom: 1rem;
 }
 
-.poly-line.line1 { animation-delay: 0s; }
-.poly-line.line2 { animation-delay: 0.3s; }
-.poly-line.line3 { animation-delay: 0.6s; }
-
-@keyframes weave {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 0.4; }
+.form-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.note {
-    animation: pulse-note 2s ease-in-out infinite;
+.form-label {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--col_3);
+    margin-top: 1rem;
+    letter-spacing: 0.3rem;
 }
 
-.note:nth-child(2) { animation-delay: 0.2s; }
-.note:nth-child(3) { animation-delay: 0.4s; }
-.note:nth-child(4) { animation-delay: 0.6s; }
-
-@keyframes pulse-note {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.2); }
+/* Specific form cards to fill row */
+#ternary-form,
+#rondo-form {
+    grid-column: span 1;
 }
 
-.chord {
-    animation: chord-pulse 2s ease-in-out infinite;
+@media (min-width: 768px) {
+    #ternary-form,
+    #rondo-form {
+        grid-column: span 1;
+    }
 }
 
-.chord:nth-child(1) { animation-delay: 0s; }
-.chord:nth-child(2) { animation-delay: 0.4s; }
-
-@keyframes chord-pulse {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
+@media (min-width: 1200px) {
+    #ternary-form,
+    #rondo-form {
+        grid-column: span 1;
+    }
 }
 
-.counter-line {
-    animation: counter-flow 3s ease-in-out infinite;
+/* Info cards */
+.info-card {
+    grid-column: span 1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 245, 255, 0.95));
+    border: 2px solid var(--col_3);
 }
 
-.counter-line.upper { animation-delay: 0s; }
-.counter-line.lower { animation-delay: 0.3s; }
-
-@keyframes counter-flow {
-    0%, 100% { stroke-dashoffset: 0; }
-    50% { stroke-dashoffset: 15; }
+/* Create a 2-column row for strophic and through-composed */
+#strophic-form {
+    grid-column: 1 / 2;
 }
 
-.unison-line {
-    animation: unison-pulse 2.5s ease-in-out infinite;
+#through-composed {
+    grid-column: 2 / 3;
 }
 
-.unison-line:nth-child(1) { animation-delay: 0s; }
-.unison-line:nth-child(2) { animation-delay: 0.1s; }
-.unison-line:nth-child(3) { animation-delay: 0.2s; }
-
-@keyframes unison-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+@media (min-width: 768px) {
+    .info-card {
+        grid-column: span 1;
+    }
+    
+    #strophic-form {
+        grid-column: 1 / 2;
+    }
+    
+    #through-composed {
+        grid-column: 2 / 3;
+    }
 }
 
-.melody-line {
-    stroke-dasharray: 5, 5;
-    animation: melody-flow 3s linear infinite;
+@media (min-width: 1200px) {
+    .info-card {
+        grid-column: span 1;
+    }
+    
+    #strophic-form {
+        grid-column: 1 / 2;
+    }
+    
+    #through-composed {
+        grid-column: 2 / 3;
+    }
 }
 
-@keyframes melody-flow {
-    0% { stroke-dashoffset: 0; }
-    100% { stroke-dashoffset: 20; }
+.info-icon {
+    width: 150px;
+    height: 120px;
+    margin-bottom: 1rem;
+    color: var(--col_3);
 }
 
-.parallel-line {
-    animation: parallel-move 3s ease-in-out infinite;
+.info-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-@keyframes parallel-move {
-    0%, 100% { stroke-dashoffset: 0; }
-    50% { stroke-dashoffset: 10; }
-}
-
-.contrary-line {
-    animation: contrary-move 3s ease-in-out infinite;
-}
-
-.contrary-line.up { animation-delay: 0s; }
-.contrary-line.down { animation-delay: 0s; }
-
-@keyframes contrary-move {
-    0%, 100% { stroke-dashoffset: 0; }
-    50% { stroke-dashoffset: 10; }
-}
-
-/* Wide cards */
+/* Wide card for theme & variation */
 .wide-card {
     grid-column: span 1;
 }
@@ -253,66 +263,72 @@ li:hover {
 
 @media (min-width: 1200px) {
     .wide-card {
-        grid-column: span 2;
+        grid-column: 1 / -1;
     }
 }
 
-/* Info cards */
-.info-card {
-    grid-column: span 1;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 245, 255, 0.95));
-    border: 2px solid var(--col_3);
-    min-height: 250px;
-}
-
-@media (min-width: 768px) {
-    .info-card {
-        grid-column: span 2;
-    }
-}
-
-@media (min-width: 1200px) {
-    .info-card {
-        grid-column: span 3;
-    }
-}
-
-.info-icon {
-    width: 120px;
-    height: 120px;
+.variation-icon {
+    width: 250px;
+    height: 100px;
     margin-bottom: 1rem;
-    color: var(--col_3);
 }
 
-.info-icon svg {
+.variation-icon svg {
     width: 100%;
     height: 100%;
 }
 
-.example-list {
+.variation-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
     width: 100%;
-    margin-top: 1rem;
 }
 
-.example-item {
-    background: white;
-    padding: 0.75rem 1.25rem;
+.variation-item {
+    background: var(--col_3);
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    border-left: 4px solid var(--col_3);
-    font-size: 1rem;
-    font-weight: 500;
-    color: #555;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
-.example-item:hover {
-    transform: translateX(5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-left-width: 6px;
+.variation-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.9; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+}
+
+.float1 {
+    animation: float 3s ease-in-out infinite;
+}
+
+.float2 {
+    animation: float 3s ease-in-out infinite 0.5s;
+}
+
+.float3 {
+    animation: float 3s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Responsive adjustments */
@@ -331,18 +347,24 @@ li:hover {
     }
     
     .wide-card,
-    .info-card {
+    .info-card,
+    .section-card {
         grid-column: 1;
     }
     
-    .texture-symbol {
+    .section-icon {
         width: 180px;
         height: 100px;
     }
     
-    .motion-symbol {
+    .variation-icon {
         width: 220px;
         height: 90px;
+    }
+    
+    .form-label {
+        font-size: 1.4rem;
+        letter-spacing: 0.2rem;
     }
 }
 
@@ -373,25 +395,18 @@ li:hover {
 .container:nth-child(8) { animation-delay: 0.4s; }
 .container:nth-child(9) { animation-delay: 0.45s; }
 .container:nth-child(10) { animation-delay: 0.5s; }
+.container:nth-child(11) { animation-delay: 0.55s; }
+.container:nth-child(12) { animation-delay: 0.6s; }
 
 /* Special hover effects */
-#monophonic:hover .single-line {
-    animation-duration: 1.5s;
+#pop-structure:hover .section-icon rect {
+    opacity: 1;
 }
 
-#polyphonic:hover .poly-line {
-    animation-duration: 2s;
-}
-
-#homophonic:hover .chord {
+#intro:hover .pulse {
     animation-duration: 1s;
 }
 
-#unison:hover .unison-line {
+#instrumental-solo:hover circle {
     animation-duration: 1.5s;
-}
-
-#parallel-motion:hover .parallel-line,
-#contrary-motion:hover .contrary-line {
-    stroke-width: 5;
 }
