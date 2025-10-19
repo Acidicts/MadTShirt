@@ -44,6 +44,10 @@ app.get('/instruments', (req, res) => {
     res.sendFile(__dirname + '/src/pages/instruments.html');
 });
 
+app.get('/rhythm', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/rhythm.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content
