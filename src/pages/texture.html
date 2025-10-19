@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texture</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/texture.css">
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/load.js"></script>
+
+</head>
+<body>
+    <nav>
+        <li onclick="window.location.href='/'">Home</li>
+    </nav>
+
+    <div class="page-header">
+        <h1>Texture</h1>
+        <p class="page-description">What we call the different layers and parts of a musical piece and how they fit together.</p>
+    </div>
+
+    <div id="container">
+        <!-- Monophonic -->
+        <div class="container texture-card" id="monophonic">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Single melodic line -->
+                    <path d="M 20 60 Q 60 30, 100 60 T 180 60" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          class="single-line"/>
+                    <!-- Musical notes on the line -->
+                    <circle cx="60" cy="30" r="6" fill="var(--col_3)" class="note"/>
+                    <circle cx="100" cy="60" r="6" fill="var(--col_3)" class="note"/>
+                    <circle cx="140" cy="30" r="6" fill="var(--col_3)" class="note"/>
+                </svg>
+            </div>
+            <p class="header">Monophonic</p>
+            <p class="descriptor">A single melodic voice or instrument</p>
+        </div>
+
+        <!-- Polyphonic -->
+        <div class="container texture-card" id="polyphonic">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Multiple interweaving lines -->
+                    <path d="M 20 40 Q 60 20, 100 50 Q 140 80, 180 40" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          opacity="0.8"
+                          class="poly-line line1"/>
+                    <path d="M 20 60 Q 60 80, 100 40 Q 140 20, 180 70" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          opacity="0.6"
+                          class="poly-line line2"/>
+                    <path d="M 20 80 Q 60 50, 100 70 Q 140 60, 180 90" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          opacity="0.7"
+                          class="poly-line line3"/>
+                </svg>
+            </div>
+            <p class="header">Polyphonic</p>
+            <p class="descriptor">Different musical lines that interweave with each other</p>
+        </div>
+
+        <!-- Homophonic -->
+        <div class="container texture-card" id="homophonic">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Chord blocks -->
+                    <g class="chord" opacity="0.8">
+                        <rect x="30" y="30" width="20" height="60" rx="3" fill="var(--col_3)"/>
+                        <rect x="55" y="40" width="20" height="50" rx="3" fill="var(--col_3)"/>
+                        <rect x="80" y="35" width="20" height="55" rx="3" fill="var(--col_3)"/>
+                    </g>
+                    <g class="chord" opacity="0.8">
+                        <rect x="110" y="25" width="20" height="65" rx="3" fill="var(--col_3)"/>
+                        <rect x="135" y="35" width="20" height="55" rx="3" fill="var(--col_3)"/>
+                        <rect x="160" y="30" width="20" height="60" rx="3" fill="var(--col_3)"/>
+                    </g>
+                </svg>
+            </div>
+            <p class="header">Homophonic</p>
+            <p class="descriptor">A texture based on chords</p>
+        </div>
+
+        <!-- Counterpoint -->
+        <div class="container texture-card" id="counterpoint">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Two distinct melodic lines -->
+                    <path d="M 20 35 L 50 35 L 80 55 L 110 45 L 140 65 L 180 55" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          class="counter-line upper"/>
+                    <path d="M 20 85 L 50 75 L 80 85 L 110 65 L 140 75 L 180 85" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          opacity="0.7"
+                          class="counter-line lower"/>
+                    <!-- Notes -->
+                    <circle cx="50" cy="35" r="5" fill="var(--col_3)"/>
+                    <circle cx="110" cy="45" r="5" fill="var(--col_3)"/>
+                    <circle cx="50" cy="75" r="5" fill="var(--col_3)" opacity="0.7"/>
+                    <circle cx="110" cy="65" r="5" fill="var(--col_3)" opacity="0.7"/>
+                </svg>
+            </div>
+            <p class="header">Counterpoint</p>
+            <p class="descriptor">Two or more different melodies playing together.</p>
+        </div>
+
+        <!-- Unison -->
+        <div class="container texture-card" id="unison">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Multiple identical lines stacked -->
+                    <path d="M 20 55 Q 60 30, 100 60 Q 140 85, 180 55" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          class="unison-line"/>
+                    <path d="M 20 60 Q 60 35, 100 65 Q 140 90, 180 60" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          opacity="0.6"
+                          class="unison-line"/>
+                    <path d="M 20 65 Q 60 40, 100 70 Q 140 95, 180 65" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none" 
+                          opacity="0.4"
+                          class="unison-line"/>
+                </svg>
+            </div>
+            <p class="header">Unison</p>
+            <p class="descriptor">When two or more voices or instruments sing/play exactly the same thing at the same time</p>
+        </div>
+
+        <!-- Melody and Accompaniment -->
+        <div class="container texture-card" id="melody-accompaniment">
+            <div class="texture-symbol">
+                <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Melody line on top -->
+                    <path d="M 20 30 Q 60 20, 100 35 Q 140 25, 180 40" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          class="melody-line"/>
+                    <!-- Accompaniment pattern below -->
+                    <g opacity="0.5">
+                        <circle cx="30" cy="70" r="4" fill="var(--col_3)"/>
+                        <circle cx="50" cy="75" r="4" fill="var(--col_3)"/>
+                        <circle cx="70" cy="70" r="4" fill="var(--col_3)"/>
+                        <circle cx="90" cy="80" r="4" fill="var(--col_3)"/>
+                        <circle cx="110" cy="75" r="4" fill="var(--col_3)"/>
+                        <circle cx="130" cy="70" r="4" fill="var(--col_3)"/>
+                        <circle cx="150" cy="80" r="4" fill="var(--col_3)"/>
+                        <circle cx="170" cy="75" r="4" fill="var(--col_3)"/>
+                    </g>
+                    <!-- Wavy accompaniment lines -->
+                    <path d="M 20 90 Q 30 85, 40 90 T 60 90 T 80 90 T 100 90 T 120 90 T 140 90 T 160 90 T 180 90" 
+                          stroke="var(--col_3)" 
+                          stroke-width="2" 
+                          fill="none" 
+                          opacity="0.4"/>
+                </svg>
+            </div>
+            <p class="header">Melody and Accompaniment</p>
+            <p class="descriptor">A prominent melody supported by harmonic accompaniment</p>
+        </div>
+
+        <!-- Parallel Motion -->
+        <div class="container texture-card wide-card" id="parallel-motion">
+            <div class="texture-symbol motion-symbol">
+                <svg viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Two lines moving in parallel -->
+                    <path d="M 20 30 L 70 30 L 120 50 L 170 40 L 230 60" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          class="parallel-line"/>
+                    <path d="M 20 50 L 70 50 L 120 70 L 170 60 L 230 80" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          opacity="0.7"
+                          class="parallel-line"/>
+                    <!-- Interval markers -->
+                    <line x1="70" y1="30" x2="70" y2="50" stroke="var(--col_3)" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+                    <line x1="170" y1="40" x2="170" y2="60" stroke="var(--col_3)" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+                    <!-- Arrows showing direction -->
+                    <path d="M 220 60 L 230 60 L 225 55" stroke="var(--col_3)" stroke-width="2" fill="none"/>
+                    <path d="M 220 80 L 230 80 L 225 75" stroke="var(--col_3)" stroke-width="2" fill="none" opacity="0.7"/>
+                </svg>
+            </div>
+            <p class="header">Parallel Motion</p>
+            <p class="descriptor">Notes moving in the same direction keeping the same interval.</p>
+        </div>
+
+        <!-- Contrary Motion -->
+        <div class="container texture-card wide-card" id="contrary-motion">
+            <div class="texture-symbol motion-symbol">
+                <svg viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Two lines moving in opposite directions -->
+                    <path d="M 20 50 L 70 40 L 120 30 L 170 25 L 230 20" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          class="contrary-line up"/>
+                    <path d="M 20 50 L 70 60 L 120 70 L 170 75 L 230 80" 
+                          stroke="var(--col_3)" 
+                          stroke-width="4" 
+                          fill="none" 
+                          opacity="0.7"
+                          class="contrary-line down"/>
+                    <!-- Arrows showing opposite directions -->
+                    <path d="M 220 20 L 230 20 L 225 15" stroke="var(--col_3)" stroke-width="2" fill="none"/>
+                    <path d="M 220 80 L 230 80 L 225 85" stroke="var(--col_3)" stroke-width="2" fill="none" opacity="0.7"/>
+                </svg>
+            </div>
+            <p class="header">Contrary Motion</p>
+            <p class="descriptor">Notes moving in opposite directions; one up, the other down.</p>
+        </div>
+
+        <!-- Thin Texture Examples -->
+        <div class="container info-card" id="thin-texture">
+            <div class="info-icon">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Thin lines representing sparse texture -->
+                    <path d="M 30 60 Q 60 40, 90 60" 
+                          stroke="var(--col_3)" 
+                          stroke-width="3" 
+                          fill="none"/>
+                    <circle cx="40" cy="50" r="4" fill="var(--col_3)"/>
+                    <circle cx="80" cy="50" r="4" fill="var(--col_3)"/>
+                    <!-- Single instrument icon -->
+                    <rect x="50" y="75" width="20" height="30" rx="2" fill="var(--col_3)" opacity="0.6"/>
+                    <circle cx="60" cy="70" r="5" fill="var(--col_3)" opacity="0.6"/>
+                </svg>
+            </div>
+            <p class="header">Examples of THIN Texture</p>
+            <div class="example-list">
+                <div class="example-item">Solo instrument</div>
+                <div class="example-item">Acoustic guitar and vocal</div>
+                <div class="example-item">Piano and cello</div>
+            </div>
+        </div>
+
+        <!-- Thick Texture Examples -->
+        <div class="container info-card" id="thick-texture">
+            <div class="info-icon">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dense lines representing thick texture -->
+                    <path d="M 20 30 Q 40 25, 60 30 Q 80 35, 100 30" stroke="var(--col_3)" stroke-width="3" fill="none"/>
+                    <path d="M 20 45 Q 40 40, 60 45 Q 80 50, 100 45" stroke="var(--col_3)" stroke-width="3" fill="none" opacity="0.8"/>
+                    <path d="M 20 60 Q 40 55, 60 60 Q 80 65, 100 60" stroke="var(--col_3)" stroke-width="3" fill="none" opacity="0.6"/>
+                    <path d="M 20 75 Q 40 70, 60 75 Q 80 80, 100 75" stroke="var(--col_3)" stroke-width="3" fill="none" opacity="0.4"/>
+                    <!-- Multiple instrument icons -->
+                    <circle cx="30" cy="95" r="8" fill="var(--col_3)" opacity="0.5"/>
+                    <circle cx="50" cy="95" r="8" fill="var(--col_3)" opacity="0.5"/>
+                    <circle cx="70" cy="95" r="8" fill="var(--col_3)" opacity="0.5"/>
+                    <circle cx="90" cy="95" r="8" fill="var(--col_3)" opacity="0.5"/>
+                </svg>
+            </div>
+            <p class="header">Examples of THICK Texture</p>
+            <div class="example-list">
+                <div class="example-item">An orchestra</div>
+                <div class="example-item">A rock band</div>
+                <div class="example-item">A samba ensemble</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,391 @@
+:root {
+    font-family: 'Lexend', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--col_1) 0%, var(--col_3) 100%);
+    min-height: 100vh;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+li {
+    display: inline;
+    margin-right: 1rem;
+    border: 2px solid black;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--col_8-accent);
+    transition: all ease-in-out 0.2s;
+    font-weight: 500;
+}
+
+li:hover {
+    background-color: var(--col_4-accent);
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    color: var(--col_3);
+    background: linear-gradient(135deg, var(--col_3), var(--col_1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.page-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #444;
+    margin: 0;
+    line-height: 1.6;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    min-height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.texture-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0.5rem 0 0.5rem 0;
+    color: var(--col_3);
+    text-align: center;
+}
+
+.descriptor {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #666;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* SVG Texture Symbols */
+.texture-symbol {
+    width: 200px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.texture-symbol svg {
+    width: 100%;
+    height: 100%;
+}
+
+.motion-symbol {
+    width: 250px;
+    height: 100px;
+}
+
+/* Animations for texture lines */
+.single-line {
+    animation: flow 3s ease-in-out infinite;
+}
+
+@keyframes flow {
+    0%, 100% { stroke-dashoffset: 0; }
+    50% { stroke-dashoffset: 10; }
+}
+
+.poly-line {
+    animation: weave 4s ease-in-out infinite;
+}
+
+.poly-line.line1 { animation-delay: 0s; }
+.poly-line.line2 { animation-delay: 0.3s; }
+.poly-line.line3 { animation-delay: 0.6s; }
+
+@keyframes weave {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+}
+
+.note {
+    animation: pulse-note 2s ease-in-out infinite;
+}
+
+.note:nth-child(2) { animation-delay: 0.2s; }
+.note:nth-child(3) { animation-delay: 0.4s; }
+.note:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes pulse-note {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.chord {
+    animation: chord-pulse 2s ease-in-out infinite;
+}
+
+.chord:nth-child(1) { animation-delay: 0s; }
+.chord:nth-child(2) { animation-delay: 0.4s; }
+
+@keyframes chord-pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+.counter-line {
+    animation: counter-flow 3s ease-in-out infinite;
+}
+
+.counter-line.upper { animation-delay: 0s; }
+.counter-line.lower { animation-delay: 0.3s; }
+
+@keyframes counter-flow {
+    0%, 100% { stroke-dashoffset: 0; }
+    50% { stroke-dashoffset: 15; }
+}
+
+.unison-line {
+    animation: unison-pulse 2.5s ease-in-out infinite;
+}
+
+.unison-line:nth-child(1) { animation-delay: 0s; }
+.unison-line:nth-child(2) { animation-delay: 0.1s; }
+.unison-line:nth-child(3) { animation-delay: 0.2s; }
+
+@keyframes unison-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.melody-line {
+    stroke-dasharray: 5, 5;
+    animation: melody-flow 3s linear infinite;
+}
+
+@keyframes melody-flow {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: 20; }
+}
+
+.parallel-line {
+    animation: parallel-move 3s ease-in-out infinite;
+}
+
+@keyframes parallel-move {
+    0%, 100% { stroke-dashoffset: 0; }
+    50% { stroke-dashoffset: 10; }
+}
+
+.contrary-line {
+    animation: contrary-move 3s ease-in-out infinite;
+}
+
+.contrary-line.up { animation-delay: 0s; }
+.contrary-line.down { animation-delay: 0s; }
+
+@keyframes contrary-move {
+    0%, 100% { stroke-dashoffset: 0; }
+    50% { stroke-dashoffset: 10; }
+}
+
+/* Wide cards */
+.wide-card {
+    grid-column: span 1;
+}
+
+@media (min-width: 768px) {
+    .wide-card {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1200px) {
+    .wide-card {
+        grid-column: span 2;
+    }
+}
+
+/* Info cards */
+.info-card {
+    grid-column: span 1;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 245, 255, 0.95));
+    border: 2px solid var(--col_3);
+    min-height: 250px;
+}
+
+@media (min-width: 900px) {
+    .info-card {
+        grid-column: span 2;
+    }
+}
+
+.info-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    color: var(--col_3);
+}
+
+.info-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.example-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.example-item {
+    background: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--col_3);
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.example-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-left-width: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-description {
+        font-size: 1rem;
+    }
+    
+    .wide-card,
+    .info-card {
+        grid-column: 1;
+    }
+    
+    .texture-symbol {
+        width: 180px;
+        height: 100px;
+    }
+    
+    .motion-symbol {
+        width: 220px;
+        height: 90px;
+    }
+}
+
+/* Animation for items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+/* Stagger animation for containers */
+.container:nth-child(1) { animation-delay: 0.05s; }
+.container:nth-child(2) { animation-delay: 0.1s; }
+.container:nth-child(3) { animation-delay: 0.15s; }
+.container:nth-child(4) { animation-delay: 0.2s; }
+.container:nth-child(5) { animation-delay: 0.25s; }
+.container:nth-child(6) { animation-delay: 0.3s; }
+.container:nth-child(7) { animation-delay: 0.35s; }
+.container:nth-child(8) { animation-delay: 0.4s; }
+.container:nth-child(9) { animation-delay: 0.45s; }
+.container:nth-child(10) { animation-delay: 0.5s; }
+
+/* Special hover effects */
+#monophonic:hover .single-line {
+    animation-duration: 1.5s;
+}
+
+#polyphonic:hover .poly-line {
+    animation-duration: 2s;
+}
+
+#homophonic:hover .chord {
+    animation-duration: 1s;
+}
+
+#unison:hover .unison-line {
+    animation-duration: 1.5s;
+}
+
+#parallel-motion:hover .parallel-line,
+#contrary-motion:hover .contrary-line {
+    stroke-width: 5;
+}

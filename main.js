@@ -24,6 +24,10 @@ app.get('/dynamics', (req, res) => {
     res.sendFile(__dirname + '/src/pages/dynamics.html');
 });
 
+app.get('/texture', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/texture.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content
