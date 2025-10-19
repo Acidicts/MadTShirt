@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/music.css">
+    <title>Music Notation - Mad TShirt</title>
+</head>
+<body>
+    <h1 id="title">Music Notation Generator</h1>
+    
+    <div id="music-container">
+        <div id="input-section">
+            <h2>Build Your Music</h2>
+            
+            <!-- Visual Note Builder -->
+            <div id="note-builder">
+                <div class="builder-row">
+                    <label>Type:</label>
+                    <select id="note-type">
+                        <option value="note">Note</option>
+                        <option value="rest">Rest</option>
+                    </select>
+                </div>
+                
+                <div class="builder-row" id="note-pitch-row">
+                    <label>Note:</label>
+                    <select id="note-letter">
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                    
+                    <select id="note-accidental">
+                        <option value="">Natural</option>
+                        <option value="#">Sharp (#)</option>
+                        <option value="b">Flat (♭)</option>
+                    </select>
+                    
+                    <select id="note-octave">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                
+                <div class="builder-row">
+                    <label>Duration:</label>
+                    <select id="note-duration">
+                        <option value="4">Whole (4)</option>
+                        <option value="2">Half (2)</option>
+                        <option value="1" selected>Quarter (1)</option>
+                        <option value="0.5">Eighth (0.5)</option>
+                        <option value="0.25">Sixteenth (0.25)</option>
+                        <option value="0.125">Thirty-second (0.125)</option>
+                    </select>
+                    
+                    <label style="margin-left: 15px;">
+                        <input type="checkbox" id="note-dotted">
+                        Dotted (+½)
+                    </label>
+                </div>
+                
+                <div class="builder-row" id="multi-bar-row" style="display: none;">
+                    <label>Multi-bar rest:</label>
+                    <input type="number" id="multi-bar-count" min="2" max="99" placeholder="e.g., 4" style="width: 80px;">
+                    <span style="font-size: 12px; color: #666; margin-left: 10px;">Leave empty for single rest</span>
+                </div>
+                
+                <div class="builder-row" id="articulation-row">
+                    <label>Articulation:</label>
+                    <select id="note-articulation">
+                        <option value="">None</option>
+                        <option value="staccato">Staccato</option>
+                        <option value="accent">Accent</option>
+                        <option value="marcato">Marcato</option>
+                        <option value="tenuto">Tenuto</option>
+                        <option value="legato">Legato</option>
+                        <option value="pizzicato">Pizzicato</option>
+                        <option value="arco">Arco</option>
+                        <option value="sforzando">Sforzando</option>
+                        <option value="tremolo">Tremolo</option>
+                    </select>
+                </div>
+                
+                <div class="builder-buttons">
+                    <button id="add-note-btn" class="action-btn">➕ Add Note</button>
+                    <button id="clear-all-btn" class="action-btn secondary">🗑️ Clear All</button>
+                </div>
+            </div>
+            
+            <!-- Notes List -->
+            <div id="notes-list-container">
+                <h3>Notes in Score:</h3>
+                <div id="notes-list"></div>
+            </div>
+            
+            <!-- JSON Output (collapsible) -->
+            <details>
+                <summary>View/Edit JSON</summary>
+                <textarea id="json-input" placeholder='{"1": ["C4", 1, "staccato"]}'></textarea>
+                <button id="update-from-json-btn" class="action-btn">Update from JSON</button>
+            </details>
+            
+            <div class="builder-buttons">
+                <button id="render-btn">🎵 Render Music</button>
+                <button id="download-btn" class="action-btn secondary">💾 Download Image</button>
+                <button id="share-url-btn" class="action-btn secondary">🔗 Copy Share URL</button>
+            </div>
+            
+            <div id="share-url-display" style="display: none;">
+                <label for="share-url-input">Share URL:</label>
+                <input type="text" id="share-url-input" readonly>
+                
+                <label for="iframe-example" style="margin-top: 15px; display: block;">Embed Code (iframe):</label>
+                <textarea id="iframe-example" readonly style="font-family: monospace; font-size: 12px; min-height: 60px; background: #f5f5f5; padding: 10px;"></textarea>
+                
+                <div class="crop-info" style="margin-top: 15px; padding: 10px; background: #f0f8ff; border-radius: 5px; font-size: 13px;">
+                    <strong>Crop Parameters (optional):</strong>
+                    <p style="margin: 5px 0;">Add to URL: <code>&cropX=0&cropY=0&cropWidth=500&cropHeight=200</code></p>
+                    <p style="margin: 5px 0;">Example: Focus on just the notes by cropping the staff area</p>
+                </div>
+            </div>
+            
+            <div id="error-message"></div>
+            
+            <div class="notation-info">
+                <h3>Quick Guide:</h3>
+                <p>Use the controls above to add notes or rests to your score. Each note can have a pitch, duration, and optional articulation.</p>
+                <p><strong>Rests:</strong> Select "Rest" as the type. For multi-bar rests, enter the number of measures.</p>
+                <p><strong>Dotted notes:</strong> Check "Dotted (+½)" to add half the note's value (e.g., dotted quarter = 1.5 beats).</p>
+                <p><strong>Legato:</strong> Consecutive notes with <code>legato</code> are slurred together.</p>
+            </div>
+        </div>
+        
+        <div id="canvas-container">
+            <canvas id="music-canvas"></canvas>
+        </div>
+    </div>
+
+    <script src="scripts/music-notation.js"></script>
+</body>
+</html>

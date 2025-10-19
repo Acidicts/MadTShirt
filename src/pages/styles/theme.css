@@ -19,3 +19,7 @@
     --col_8-accent: #FEC4D8;
     --col_9-accent: #A8FFE0;
 }
+
+body {
+    display: none;
+}

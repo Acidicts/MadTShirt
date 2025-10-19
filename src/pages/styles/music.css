@@ -1,0 +1,407 @@
+/* Music Notation Page Styles */
+body {
+    display: block;
+}
+
+#music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    border-radius: 2.5rem;
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    margin: 1.5rem auto 2rem auto;
+    max-width: 95vw;
+}
+
+#input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 700px;
+}
+
+#input-section h2 {
+    text-align: center;
+    color: #333;
+    margin: 0;
+}
+
+#input-section h3 {
+    margin: 0.5rem 0;
+    color: #444;
+    font-size: 1rem;
+}
+
+/* Note Builder */
+#note-builder {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--col_3);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.builder-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.builder-row label {
+    font-weight: 600;
+    color: #333;
+    min-width: 100px;
+}
+
+.builder-row select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--col_3);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    background: white;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.builder-row select:focus {
+    outline: none;
+    border-color: var(--col_6);
+}
+
+.builder-row input[type="number"] {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid var(--col_3);
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+.builder-row input[type="number"]:focus {
+    outline: none;
+    border-color: var(--col_6);
+}
+
+.builder-row input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.builder-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, var(--col_4), var(--col_6));
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    flex: 1;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.action-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.action-btn.secondary {
+    background: linear-gradient(135deg, #999, #666);
+}
+
+/* Notes List */
+#notes-list-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--col_5);
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: white;
+    border-radius: 0.75rem;
+    border: 1px solid #ddd;
+    transition: background 0.2s;
+}
+
+.note-item:hover {
+    background: var(--col_1);
+}
+
+.note-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex: 1;
+}
+
+.note-number {
+    font-weight: bold;
+    color: var(--col_6);
+    min-width: 30px;
+}
+
+.note-pitch {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    min-width: 60px;
+}
+
+.note-duration {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.note-articulation {
+    color: var(--col_4);
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.note-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.note-btn {
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: transform 0.1s;
+}
+
+.note-btn:hover {
+    transform: scale(1.05);
+}
+
+.move-up-btn {
+    background: var(--col_3);
+    color: white;
+}
+
+.move-down-btn {
+    background: var(--col_5);
+    color: white;
+}
+
+.delete-btn {
+    background: #ff6b6b;
+    color: white;
+}
+
+/* JSON Section */
+details {
+    width: 100%;
+}
+
+details summary {
+    cursor: pointer;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.75rem;
+    font-weight: 600;
+    color: #555;
+    user-select: none;
+}
+
+details summary:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+details[open] summary {
+    margin-bottom: 1rem;
+}
+
+#input-section label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#json-input {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    border: 2px solid var(--col_3);
+    border-radius: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    resize: vertical;
+    background: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+#json-input:focus {
+    outline: none;
+    border-color: var(--col_6);
+}
+
+#update-from-json-btn {
+    margin-top: 0.5rem;
+}
+
+#render-btn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--col_4), var(--col_6));
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    flex: 1;
+}
+
+#render-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+#render-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#download-btn, #share-url-btn {
+    flex: 1;
+}
+
+#share-url-display {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+#share-url-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--col_5);
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-family: 'Courier New', monospace;
+    background: white;
+    color: #333;
+}
+
+#error-message {
+    display: none;
+    padding: 1rem;
+    background: rgba(255, 100, 100, 0.15);
+    border: 2px solid #ff6464;
+    border-radius: 0.75rem;
+    color: #cc0000;
+    font-weight: 500;
+}
+
+#canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+}
+
+#music-canvas {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #music-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .builder-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .builder-row label {
+        min-width: auto;
+    }
+    
+    .builder-row select {
+        width: 100%;
+    }
+    
+    .builder-buttons {
+        flex-direction: column;
+    }
+    
+    .note-info {
+        flex-wrap: wrap;
+    }
+    
+    #json-input {
+        font-size: 0.85rem;
+    }
+    
+    #render-btn {
+        font-size: 1rem;
+        padding: 0.85rem 2rem;
+    }
+}
+
+/* Music notation helper info */
+.notation-info {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.notation-info h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.notation-info code {
+    background: rgba(0, 0, 0, 0.05);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.3rem;
+    font-family: 'Courier New', monospace;
+}

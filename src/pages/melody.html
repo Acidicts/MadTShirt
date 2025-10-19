@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/melody.css">
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/load.js"></script>
+
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+    </nav>
+
+    <div id="container">
+        <div class="container" id="pitch">
+            <p class="header">Pitch</p>
+            <p class="descriptor">How High or Low the note is</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%5D%2C%222%22%3A%5B%22G5%22%2C1%5D%7D" alt="Pitch Icon">
+        </div>
+        <div class="container" id="interval">
+            <p class="header">Interval</p>
+            <p class="descriptor">The distance between any two notes</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22F4%22%2C1%5D%2C%222%22%3A%5B%22C5%22%2C1%5D%7D" alt="Interval Icon">
+        </div>
+        <div class="container" id="motif">
+            <p class="header">Motif</p>
+            <p class="descriptor">A fragment of a melody</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22F4%22%2C0.5%5D%2C%222%22%3A%5B%22G4%22%2C0.25%5D%2C%225%22%3A%5B%22A4%22%2C0.25%5D%2C%227%22%3A%5B%22E4%22%2C1%5D%7D" alt="Motif Image">
+        </div>
+        <div class="container" id="range">
+            <p class="header">Range</p>
+            <p class="descriptor">The span between the lowest and highest notes</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C0.5%5D%2C%222%22%3A%5B%22G4%22%2C0.25%5D%2C%223%22%3A%5B%22A4%22%2C0.25%5D%2C%226%22%3A%5B%22A5%22%2C1%5D%7D" alt="Range Image">
+        </div>
+        <div class="container" id="phrase">
+            <p class="header">Phrase</p>
+            <p class="descriptor">A longer melodic idea. Musical "Sentences" are constructed from phrases</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%5D%2C%222%22%3A%5B%22C4%22%2C1%5D%2C%223%22%3A%5B%22G4%22%2C1%5D%2C%224%22%3A%5B%22G4%22%2C1%5D%2C%225%22%3A%5B%22A4%22%2C1%5D%2C%226%22%3A%5B%22A4%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C2%5D%2C%228%22%3A%5B%22F4%22%2C1%5D%2C%229%22%3A%5B%22F4%22%2C1%5D%2C%2210%22%3A%5B%22E4%22%2C1%5D%2C%2211%22%3A%5B%22E4%22%2C1%5D%2C%2212%22%3A%5B%22D4%22%2C1%5D%2C%2213%22%3A%5B%22D4%22%2C1%5D%2C%2214%22%3A%5B%22C4%22%2C2%5D%7D" alt="Phrase Image">
+        </div>
+        <div class="container" id="melodic_movement">
+            <p class="header">Melodic Movement</p>
+            <p class="descriptor">
+                <div class="melodic-movement-card">
+                    <style>
+                        .melodic-movement-card{
+                            padding:0.6rem;
+                            background:rgba(255,255,255,0.02);
+                            border-radius:8px;
+                            border:1px solid rgba(255,255,255,0.04);
+                            font-size:0.95rem;
+                            line-height:1.4;
+                            max-width:36rem;
+                        }
+                        .melodic-movement-card dl{margin:0;padding:0;}
+                        .melodic-movement-card dt{
+                            font-weight:700;
+                            color:var(--accent,#d1f0ff);
+                            margin-top:0.5rem;
+                        }
+                        .melodic-movement-card dd{
+                            margin:0 0 0.6rem 0.5rem;
+                            color:var(--muted,#dcdcdc);
+                        }
+                        .melodic-movement-card code{
+                            background:rgba(0,0,0,0.12);
+                            padding:0.08rem 0.25rem;
+                            border-radius:4px;
+                            font-family:monospace;
+                            font-size:0.9em;
+                        }
+                    </style>
+
+                    <dl>
+                        <dt>Steps</dt>
+                        <dd>Movement between notes that are next to each other in the scale (adjacent scale degrees).</dd>
+
+                        <dt>Skips</dt>
+                        <dd>Movement equal to two steps — you “skip” over one scale note.</dd>
+
+                        <dt>Leaps</dt>
+                        <dd>Any movement larger than a skip (intervals bigger than a third).</dd>
+
+                        <dt>Scalar</dt>
+                        <dd>A section of melody that moves along using notes in scale order (consecutive scale tones).</dd>
+
+                        <dt>Chromatic</dt>
+                        <dd>Movement using semitone steps, including notes not in the key (chromatic tones).</dd>
+
+                        <dt>Passing note</dt>
+                        <dd>Non-chord tones that link chord tones, typically approached and left by step to connect harmony.</dd>
+                    </dl>
+                </div>
+            </p>
+        </div>
+        <div class="container" id="Hook/riff">
+            <p class="header">Hook / Riff</p>
+            <p class="descriptor">A memorable repeated melodic idea 
+designed to catch the ear of the listener. </p>
+        </div>
+        <div class="container" id="scale/mode">
+            <p class="header">Scale / Mode</p>
+            <p class="descriptor"> A group of notes which a melody is based on
+ e.g. major, minor, blues, chromatic, dorian</p>
+        </div>
+        <div class="container" id="countermelody">
+            <p class="header">Countermelody</p>
+            <p class="descriptor">A secondary melody that complements the main melody.</p>
+            <p>Main Melody</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Melody">
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Countermelody">
+            <p>Countermelody</p>
+        </div>
+        <div class="container" id="compositional_devices">
+            <p class="header"></p>
+            <p class="descriptor"></p>
+        </div>
+    </div>
+    
+</body>
+</html>
