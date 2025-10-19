@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony - Music Theory</title>
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/harmony.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="scripts/load.js"></script>
+</head>
+<body>
+    <div class="page-header">
+        <h1>Harmony</h1>
+        <p>How chords are used in a piece of music</p>
+    </div>
+
+    <div id="container">
+        <!-- Triad -->
+        <div class="container" id="triad">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="120" r="18" fill="var(--col_1)" class="note-bottom"/>
+                    <circle cx="100" cy="90" r="18" fill="var(--col_2)" class="note-middle"/>
+                    <circle cx="100" cy="60" r="18" fill="var(--col_3)" class="note-top"/>
+                    <text x="100" y="35" text-anchor="middle" font-size="14" fill="#666" font-weight="600">TRIAD</text>
+                </svg>
+            </div>
+            <h2>Triad</h2>
+            <p>A basic type of chord made up of three notes</p>
+        </div>
+
+        <!-- Inversion -->
+        <div class="container" id="inversion">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <g class="chord-group" id="root">
+                        <circle cx="50" cy="90" r="12" fill="var(--col_1)"/>
+                        <circle cx="50" cy="70" r="12" fill="var(--col_2)"/>
+                        <circle cx="50" cy="50" r="12" fill="var(--col_3)"/>
+                        <text x="50" y="110" text-anchor="middle" font-size="11" fill="#666">Root</text>
+                    </g>
+                    <path d="M 70 70 Q 90 70 100 70" stroke="var(--col_4)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                    <g class="chord-group" id="first-inv">
+                        <circle cx="150" cy="90" r="12" fill="var(--col_3)"/>
+                        <circle cx="150" cy="70" r="12" fill="var(--col_1)"/>
+                        <circle cx="150" cy="50" r="12" fill="var(--col_2)"/>
+                        <text x="150" y="110" text-anchor="middle" font-size="11" fill="#666">1st Inv</text>
+                    </g>
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_4)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Inversion</h2>
+            <p>Rearranging the order of the individual notes of a chord</p>
+        </div>
+
+        <!-- Power Chord -->
+        <div class="container" id="power-chord">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="20" fill="var(--col_1)" class="power-note"/>
+                    <circle cx="100" cy="60" r="20" fill="var(--col_3)" class="power-note"/>
+                    <text x="100" y="35" text-anchor="middle" font-size="16" fill="#666" font-weight="700">C⁵</text>
+                    <circle cx="100" cy="80" r="45" fill="none" stroke="var(--col_4)" stroke-width="3" class="power-ring"/>
+                </svg>
+            </div>
+            <h2>Power Chord</h2>
+            <p>A chord using only the 1st and 5th scale degrees, no 3rd</p>
+        </div>
+
+        <!-- Arpeggio -->
+        <div class="container" id="arpeggio">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 40 100 Q 80 80 100 60 T 160 40" stroke="var(--col_4)" stroke-width="3" fill="none" class="arp-line"/>
+                    <circle cx="40" cy="100" r="14" fill="var(--col_1)" class="arp-1"/>
+                    <circle cx="100" cy="60" r="14" fill="var(--col_2)" class="arp-2"/>
+                    <circle cx="160" cy="40" r="14" fill="var(--col_3)" class="arp-3"/>
+                </svg>
+            </div>
+            <h2>Arpeggio</h2>
+            <p>Playing the individual notes of a chord one after another</p>
+        </div>
+
+        <!-- Cadence -->
+        <div class="container" id="cadence">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="40" text-anchor="middle" font-size="14" fill="#666" font-weight="600">CADENCE</text>
+                    <rect x="30" y="60" width="60" height="50" rx="8" fill="var(--col_1)" class="cadence-chord"/>
+                    <text x="60" y="90" text-anchor="middle" font-size="18" fill="white" font-weight="600">V</text>
+                    <path d="M 95 85 L 105 85" stroke="var(--col_4)" stroke-width="3" marker-end="url(#arrow2)"/>
+                    <rect x="110" y="60" width="60" height="50" rx="8" fill="var(--col_3)" class="cadence-chord"/>
+                    <text x="140" y="90" text-anchor="middle" font-size="18" fill="white" font-weight="600">I</text>
+                    <defs>
+                        <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_4)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Cadence</h2>
+            <p>A movement between two chords at the end of a phrase</p>
+        </div>
+
+        <!-- Chromatic -->
+        <div class="container" id="chromatic">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <g class="chromatic-notes">
+                        <circle cx="40" cy="80" r="12" fill="var(--col_1)" class="chrom-1"/>
+                        <circle cx="70" cy="80" r="12" fill="var(--col_2)" class="chrom-2"/>
+                        <circle cx="100" cy="80" r="12" fill="var(--col_3)" class="chrom-3"/>
+                        <circle cx="130" cy="80" r="12" fill="var(--col_4)" class="chrom-4"/>
+                        <circle cx="160" cy="80" r="12" fill="var(--col_5)" class="chrom-5"/>
+                    </g>
+                    <text x="100" y="110" text-anchor="middle" font-size="12" fill="#666">Outside the key</text>
+                    <text x="40" y="65" text-anchor="middle" font-size="14" fill="#333">♯</text>
+                    <text x="100" y="65" text-anchor="middle" font-size="14" fill="#333">♭</text>
+                    <text x="160" y="65" text-anchor="middle" font-size="14" fill="#333">♮</text>
+                </svg>
+            </div>
+            <h2>Chromatic</h2>
+            <p>Music that uses chords not naturally found in the key</p>
+        </div>
+
+        <!-- Diatonic -->
+        <div class="container" id="diatonic">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="75" r="50" fill="none" stroke="var(--col_3)" stroke-width="3" class="key-circle"/>
+                    <g class="diatonic-chords">
+                        <rect x="80" y="55" width="40" height="40" rx="6" fill="var(--col_1)" class="dia-chord"/>
+                        <text x="100" y="80" text-anchor="middle" font-size="16" fill="white" font-weight="600">I</text>
+                    </g>
+                    <text x="100" y="130" text-anchor="middle" font-size="12" fill="#666">In the key</text>
+                </svg>
+            </div>
+            <h2>Diatonic</h2>
+            <p>Music that uses only chords that belong to the key</p>
+        </div>
+
+        <!-- Dominant -->
+        <div class="container" id="dominant">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="70" y="50" width="60" height="60" rx="8" fill="var(--col_1)" class="dom-chord"/>
+                    <text x="100" y="85" text-anchor="middle" font-size="24" fill="white" font-weight="700">V</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="12" fill="#666">5th chord of key</text>
+                </svg>
+            </div>
+            <h2>Dominant</h2>
+            <p>The fifth chord (V) of a key</p>
+        </div>
+
+        <!-- Harmonic Rhythm -->
+        <div class="container" id="harmonic-rhythm">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="60" width="35" height="40" rx="5" fill="var(--col_1)" class="rhythm-1"/>
+                    <text x="37.5" y="85" text-anchor="middle" font-size="14" fill="white">I</text>
+                    <rect x="65" y="60" width="35" height="40" rx="5" fill="var(--col_2)" class="rhythm-2"/>
+                    <text x="82.5" y="85" text-anchor="middle" font-size="14" fill="white">IV</text>
+                    <rect x="110" y="60" width="35" height="40" rx="5" fill="var(--col_3)" class="rhythm-3"/>
+                    <text x="127.5" y="85" text-anchor="middle" font-size="14" fill="white">V</text>
+                    <rect x="155" y="60" width="35" height="40" rx="5" fill="var(--col_4)" class="rhythm-4"/>
+                    <text x="172.5" y="85" text-anchor="middle" font-size="14" fill="white">I</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666">Rate of chord change</text>
+                </svg>
+            </div>
+            <h2>Harmonic Rhythm</h2>
+            <p>The rate at which the chords change in a piece</p>
+        </div>
+
+        <!-- Modulation -->
+        <div class="container" id="modulation">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="75" r="35" fill="var(--col_1)" opacity="0.8" class="mod-key1"/>
+                    <text x="70" y="80" text-anchor="middle" font-size="16" fill="white" font-weight="600">Key 1</text>
+                    <path d="M 110 75 L 130 75" stroke="var(--col_4)" stroke-width="4" marker-end="url(#arrow3)" class="mod-arrow"/>
+                    <circle cx="150" cy="75" r="35" fill="var(--col_3)" opacity="0.8" class="mod-key2"/>
+                    <text x="150" y="80" text-anchor="middle" font-size="16" fill="white" font-weight="600">Key 2</text>
+                    <defs>
+                        <marker id="arrow3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_4)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Modulation</h2>
+            <p>When the harmony shifts to a new key</p>
+        </div>
+
+        <!-- Primary Triads -->
+        <div class="container" id="primary-triads">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="30" y="60" width="40" height="50" rx="6" fill="var(--col_1)" class="primary-1"/>
+                    <text x="50" y="90" text-anchor="middle" font-size="20" fill="white" font-weight="700">I</text>
+                    <rect x="80" y="60" width="40" height="50" rx="6" fill="var(--col_2)" class="primary-2"/>
+                    <text x="100" y="90" text-anchor="middle" font-size="20" fill="white" font-weight="700">IV</text>
+                    <rect x="130" y="60" width="40" height="50" rx="6" fill="var(--col_3)" class="primary-3"/>
+                    <text x="150" y="90" text-anchor="middle" font-size="20" fill="white" font-weight="700">V</text>
+                    <text x="100" y="130" text-anchor="middle" font-size="11" fill="#666">Most important chords</text>
+                </svg>
+            </div>
+            <h2>Primary Triads</h2>
+            <p>Chords I, IV, and V in a key</p>
+        </div>
+
+        <!-- Progression -->
+        <div class="container" id="progression">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="70" width="30" height="35" rx="5" fill="var(--col_1)" class="prog-1"/>
+                    <text x="35" y="92" text-anchor="middle" font-size="14" fill="white">I</text>
+                    <path d="M 52 87 L 63 87" stroke="#999" stroke-width="2" marker-end="url(#arrow4)"/>
+                    <rect x="65" y="70" width="30" height="35" rx="5" fill="var(--col_2)" class="prog-2"/>
+                    <text x="80" y="92" text-anchor="middle" font-size="14" fill="white">V</text>
+                    <path d="M 97 87 L 108 87" stroke="#999" stroke-width="2" marker-end="url(#arrow4)"/>
+                    <rect x="110" y="70" width="30" height="35" rx="5" fill="var(--col_3)" class="prog-3"/>
+                    <text x="125" y="92" text-anchor="middle" font-size="14" fill="white">vi</text>
+                    <path d="M 142 87 L 153 87" stroke="#999" stroke-width="2" marker-end="url(#arrow4)"/>
+                    <rect x="155" y="70" width="30" height="35" rx="5" fill="var(--col_4)" class="prog-4"/>
+                    <text x="170" y="92" text-anchor="middle" font-size="14" fill="white">IV</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666">Sequence of chords</text>
+                    <defs>
+                        <marker id="arrow4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                            <polygon points="0 0, 8 3, 0 6" fill="#999"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Progression</h2>
+            <p>A sequence of chords played together</p>
+        </div>
+
+        <!-- Seventh Chord -->
+        <div class="container" id="seventh">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="110" r="16" fill="var(--col_1)" class="seventh-1"/>
+                    <circle cx="100" cy="85" r="16" fill="var(--col_2)" class="seventh-2"/>
+                    <circle cx="100" cy="60" r="16" fill="var(--col_3)" class="seventh-3"/>
+                    <circle cx="100" cy="35" r="16" fill="var(--col_4)" class="seventh-4"/>
+                    <text x="100" y="135" text-anchor="middle" font-size="12" fill="#666">7th degree added</text>
+                </svg>
+            </div>
+            <h2>Seventh Chord</h2>
+            <p>Adding the 7th degree of the scale to a triad</p>
+        </div>
+
+        <!-- Tonic -->
+        <div class="container" id="tonic">
+            <div class="icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="75" r="45" fill="var(--col_1)" class="tonic-circle"/>
+                    <text x="100" y="85" text-anchor="middle" font-size="28" fill="white" font-weight="700">I</text>
+                    <circle cx="100" cy="75" r="55" fill="none" stroke="var(--col_3)" stroke-width="3" class="tonic-ring"/>
+                    <text x="100" y="135" text-anchor="middle" font-size="12" fill="#666">First chord (home)</text>
+                </svg>
+            </div>
+            <h2>Tonic</h2>
+            <p>The first chord (I) in a key</p>
+        </div>
+
+        <!-- Perfect Cadence -->
+        <div class="container info-card" id="perfect-cadence">
+            <div class="info-icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="30" text-anchor="middle" font-size="14" fill="var(--col_3)" font-weight="600">PERFECT CADENCE</text>
+                    <rect x="30" y="50" width="55" height="55" rx="8" fill="var(--col_1)"/>
+                    <text x="57.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">V</text>
+                    <path d="M 90 77 L 110 77" stroke="var(--col_3)" stroke-width="4" marker-end="url(#arrow5)"/>
+                    <rect x="115" y="50" width="55" height="55" rx="8" fill="var(--col_3)"/>
+                    <text x="142.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">I</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666" font-style="italic">"The strongest one"</text>
+                    <defs>
+                        <marker id="arrow5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_3)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Perfect Cadence</h2>
+            <p><strong>V → I</strong></p>
+            <p>"The strongest one" - creates a strong sense of finality and resolution</p>
+        </div>
+
+        <!-- Plagal Cadence -->
+        <div class="container info-card" id="plagal-cadence">
+            <div class="info-icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="30" text-anchor="middle" font-size="14" fill="var(--col_2)" font-weight="600">PLAGAL CADENCE</text>
+                    <rect x="30" y="50" width="55" height="55" rx="8" fill="var(--col_2)"/>
+                    <text x="57.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">IV</text>
+                    <path d="M 90 77 L 110 77" stroke="var(--col_2)" stroke-width="4" marker-end="url(#arrow6)"/>
+                    <rect x="115" y="50" width="55" height="55" rx="8" fill="var(--col_1)"/>
+                    <text x="142.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">I</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666" font-style="italic">"The Amen one"</text>
+                    <defs>
+                        <marker id="arrow6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_2)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Plagal Cadence</h2>
+            <p><strong>IV → I</strong></p>
+            <p>"The Amen one" - often heard at the end of hymns</p>
+        </div>
+
+        <!-- Imperfect Cadence -->
+        <div class="container info-card" id="imperfect-cadence">
+            <div class="info-icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="30" text-anchor="middle" font-size="14" fill="var(--col_4)" font-weight="600">IMPERFECT CADENCE</text>
+                    <rect x="30" y="50" width="55" height="55" rx="8" fill="var(--col_5)"/>
+                    <text x="57.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">I/II/IV</text>
+                    <path d="M 90 77 L 110 77" stroke="var(--col_4)" stroke-width="4" marker-end="url(#arrow7)"/>
+                    <rect x="115" y="50" width="55" height="55" rx="8" fill="var(--col_4)"/>
+                    <text x="142.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">V</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666" font-style="italic">"The cliffhanger one"</text>
+                    <defs>
+                        <marker id="arrow7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_4)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Imperfect Cadence</h2>
+            <p><strong>Any chord → V</strong></p>
+            <p>"The cliffhanger one" - creates tension and expectation</p>
+        </div>
+
+        <!-- Interrupted Cadence -->
+        <div class="container info-card" id="interrupted-cadence">
+            <div class="info-icon">
+                <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <text x="100" y="30" text-anchor="middle" font-size="14" fill="var(--col_6)" font-weight="600">INTERRUPTED CADENCE</text>
+                    <rect x="30" y="50" width="55" height="55" rx="8" fill="var(--col_1)"/>
+                    <text x="57.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">V</text>
+                    <path d="M 90 77 L 110 77" stroke="var(--col_6)" stroke-width="4" stroke-dasharray="5,5" marker-end="url(#arrow8)"/>
+                    <rect x="115" y="50" width="55" height="55" rx="8" fill="var(--col_6)"/>
+                    <text x="142.5" y="82" text-anchor="middle" font-size="22" fill="white" font-weight="700">vi</text>
+                    <text x="100" y="125" text-anchor="middle" font-size="11" fill="#666" font-style="italic">"The hidden twist one"</text>
+                    <defs>
+                        <marker id="arrow8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="var(--col_6)"/>
+                        </marker>
+                    </defs>
+                </svg>
+            </div>
+            <h2>Interrupted Cadence</h2>
+            <p><strong>V → vi</strong></p>
+            <p>"The hidden twist one" - unexpected resolution creates surprise</p>
+        </div>
+
+    </div>
+</body>
+</html>

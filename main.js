@@ -36,6 +36,14 @@ app.get('/structure', (req, res) => {
     res.sendFile(__dirname + '/src/pages/structure.html');
 });
 
+app.get('/harmony', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/harmony.html');
+});
+
+app.get('/instruments', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/instruments.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content

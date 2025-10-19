@@ -46,6 +46,8 @@ footer a:hover {
     transition: box-shadow 0.3s;
     width: 90%;
     max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title {
