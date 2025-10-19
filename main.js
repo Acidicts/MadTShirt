@@ -16,6 +16,10 @@ app.get('/melody', (req, res) => {
     res.sendFile(__dirname + '/src/pages/melody.html');
 });
 
+app.get('/articulation', (req, res) => {
+    res.sendFile(__dirname + '/src/pages/articulation.html');
+});
+
 // Handle favicon requests
 app.get('/favicon.ico', (req, res) => {
     res.status(204).end(); // No content

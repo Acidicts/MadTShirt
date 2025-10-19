@@ -47,6 +47,98 @@
             <p class="descriptor">A longer melodic idea. Musical "Sentences" are constructed from phrases</p>
             <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%5D%2C%222%22%3A%5B%22C4%22%2C1%5D%2C%223%22%3A%5B%22G4%22%2C1%5D%2C%224%22%3A%5B%22G4%22%2C1%5D%2C%225%22%3A%5B%22A4%22%2C1%5D%2C%226%22%3A%5B%22A4%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C2%5D%2C%228%22%3A%5B%22F4%22%2C1%5D%2C%229%22%3A%5B%22F4%22%2C1%5D%2C%2210%22%3A%5B%22E4%22%2C1%5D%2C%2211%22%3A%5B%22E4%22%2C1%5D%2C%2212%22%3A%5B%22D4%22%2C1%5D%2C%2213%22%3A%5B%22D4%22%2C1%5D%2C%2214%22%3A%5B%22C4%22%2C2%5D%7D" alt="Phrase Image">
         </div>
+        <div id="tricontainer" style="width: 95%;">
+            <div>
+                <div class="container" id="hook/riff">
+                    <p class="header">Hook / Riff</p>
+                    <p class="descriptor">A memorable repeated melodic idea 
+        designed to catch the ear of the listener. </p>
+                </div>
+                <div class="container" id="scale/mode">
+                    <p class="header">Scale / Mode</p>
+                    <p class="descriptor"> A group of notes which a melody is based on
+        e.g. major, minor, blues, chromatic, dorian</p>
+                </div>
+            </div>
+            <div class="container" id="countermelody">
+                <p class="header">Countermelody</p>
+                <p class="descriptor">A secondary melody that complements the main melody.</p>
+                <p>Main Melody</p>
+                <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Melody">
+                <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Countermelody">
+                <p>Countermelody</p>
+            </div>
+        </div>
+        <div class="container" id="compositional_devices">
+            <p class="header">Compositional Devices</p>
+            <p class="descriptor">Techniques used to develop, repeat, and transform melodic material.</p>
+
+            <div class="compositional-card">
+                <style>
+                    .compositional-card{
+                        padding:0.6rem;
+                        background:rgba(255,255,255,0.02);
+                        border-radius:8px;
+                        border:1px solid rgba(255,255,255,0.04);
+                        font-size:0.95rem;
+                        line-height:1.45;
+                        max-width:40rem;
+                    }
+                    .compositional-card dl{margin:0;padding:0;}
+                    .compositional-card dt{
+                        font-weight:700;
+                        color:var(--accent,#d1f0ff);
+                        margin-top:0.6rem;
+                        display:flex;
+                        align-items:center;
+                        gap:0.5rem;
+                    }
+                    .compositional-card dd{
+                        margin:0 0 0.6rem 0.5rem;
+                        color:var(--muted,#dcdcdc);
+                    }
+                    .compositional-card .badge{
+                        display:inline-block;
+                        font-size:0.75rem;
+                        padding:0.12rem 0.4rem;
+                        border-radius:6px;
+                        background:rgba(209,240,255,0.08);
+                        color:var(--accent,#d1f0ff);
+                        border:1px solid rgba(209,240,255,0.06);
+                    }
+                    .compositional-card code{
+                        background:rgba(0,0,0,0.12);
+                        padding:0.06rem 0.25rem;
+                        border-radius:4px;
+                        font-family:monospace;
+                        font-size:0.9em;
+                    }
+                </style>
+
+                <dl>
+                    <dt><span class="badge">Repetition</span> Repetition</dt>
+                    <dd>Repeat a melodic idea exactly to reinforce familiarity and form.</dd>
+
+                    <dt><span class="badge">Sequence</span> Sequence</dt>
+                    <dd>Repeat a melodic idea but start it on a different pitch (transposed repetition).</dd>
+
+                    <dt><span class="badge">Imitation</span> Imitation</dt>
+                    <dd>Repeat the melodic idea in another voice or instrument, often offset in time.</dd>
+
+                    <dt><span class="badge">Variation</span> Variation</dt>
+                    <dd>Alter the melodic idea slightly (rhythm, interval, ornamentation) while keeping its identity.</dd>
+
+                    <dt><span class="badge">Ostinato</span> Ostinato</dt>
+                    <dd>Persistent repetition of a short melodic or rhythmic pattern beneath changing material.</dd>
+
+                    <dt><span class="badge">Inversion</span> Inversion</dt>
+                    <dd>Turn the melodic idea upside down so upward intervals become downward (mirror motion).</dd>
+
+                    <dt><span class="badge">Retrograde</span> Retrograde</dt>
+                    <dd>Play the melodic idea backwards (reverse the order of its notes).</dd>
+                </dl>
+            </div>
+        </div>
         <div class="container" id="melodic_movement">
             <p class="header">Melodic Movement</p>
             <p class="descriptor">
@@ -101,28 +193,6 @@
                     </dl>
                 </div>
             </p>
-        </div>
-        <div class="container" id="Hook/riff">
-            <p class="header">Hook / Riff</p>
-            <p class="descriptor">A memorable repeated melodic idea 
-designed to catch the ear of the listener. </p>
-        </div>
-        <div class="container" id="scale/mode">
-            <p class="header">Scale / Mode</p>
-            <p class="descriptor"> A group of notes which a melody is based on
- e.g. major, minor, blues, chromatic, dorian</p>
-        </div>
-        <div class="container" id="countermelody">
-            <p class="header">Countermelody</p>
-            <p class="descriptor">A secondary melody that complements the main melody.</p>
-            <p>Main Melody</p>
-            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Melody">
-            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%5D%2C%222%22%3A%5B%22E4%22%2C2%5D%2C%223%22%3A%5B%22G4%22%2C2%5D%2C%224%22%3A%5B%22A4%22%2C2%5D%2C%225%22%3A%5B%22Bb3%22%2C2%5D%2C%226%22%3A%5B%22rest%22%2C1%5D%2C%227%22%3A%5B%22G4%22%2C1%5D%7D" alt="Countermelody">
-            <p>Countermelody</p>
-        </div>
-        <div class="container" id="compositional_devices">
-            <p class="header"></p>
-            <p class="descriptor"></p>
         </div>
     </div>
     

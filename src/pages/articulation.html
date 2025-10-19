@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articulation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/articulation.css">
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/load.js"></script>
+
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+    </nav>
+
+    <div class="page-header">
+        <h1>Articulation</h1>
+        <p class="page-description">How you play or sing a note. An important part of performing music expressively.</p>
+    </div>
+
+    <div id="container">
+        <!-- Staccato -->
+        <div class="container" id="staccato">
+            <p class="header">Staccato</p>
+            <p class="descriptor">Performed short and briefly. Notes sound detached from each other.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%2C%22staccato%22%5D%2C%222%22%3A%5B%22E4%22%2C1%2C%22staccato%22%5D%2C%223%22%3A%5B%22G4%22%2C1%2C%22staccato%22%5D%2C%224%22%3A%5B%22C5%22%2C1%2C%22staccato%22%5D%7D" alt="Staccato Example">
+        </div>
+
+        <!-- Accent -->
+        <div class="container" id="accent">
+            <p class="header">Accent</p>
+            <p class="descriptor">Emphasise a note so that it sounds louder than others.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%5D%2C%222%22%3A%5B%22E4%22%2C1%2C%22accent%22%5D%2C%223%22%3A%5B%22G4%22%2C1%5D%2C%224%22%3A%5B%22C5%22%2C1%2C%22accent%22%5D%7D" alt="Accent Example">
+        </div>
+
+        <!-- Legato -->
+        <div class="container" id="legato">
+            <p class="header">Legato</p>
+            <p class="descriptor">Perform the notes smoothly. Notes sound connected to each other.</p>
+            <p class="sub-descriptor">A smooth articulation between two notes is called a <strong>SLUR</strong>.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%2C%22legato%22%5D%2C%222%22%3A%5B%22E4%22%2C1%2C%22legato%22%5D%2C%223%22%3A%5B%22G4%22%2C1%2C%22legato%22%5D%2C%224%22%3A%5B%22C5%22%2C1%2C%22legato%22%5D%7D" alt="Legato Example">
+        </div>
+
+        <!-- Sforzando -->
+        <div class="container" id="sforzando">
+            <p class="header">Sforzando</p>
+            <p class="descriptor">A sforzando is a type of accent. The note should be played with a sudden, strong emphasis.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C1%5D%2C%222%22%3A%5B%22E4%22%2C2%2C%22sforzando%22%5D%2C%223%22%3A%5B%22G4%22%2C1%5D%7D" alt="Sforzando Example">
+        </div>
+
+        <!-- Orchestral Strings Section -->
+        <div class="container section-header" id="orchestral-strings-header">
+            <p class="header">Orchestral Strings</p>
+            <p class="descriptor">Special articulation techniques for string instruments</p>
+        </div>
+
+        <!-- Pizzicato -->
+        <div class="container" id="pizzicato">
+            <p class="header">Pizzicato</p>
+            <p class="descriptor">Perform the notes by plucking them with the fingers.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22G4%22%2C1%2C%22pizzicato%22%5D%2C%222%22%3A%5B%22B4%22%2C1%2C%22pizzicato%22%5D%2C%223%22%3A%5B%22D5%22%2C1%2C%22pizzicato%22%5D%2C%224%22%3A%5B%22G5%22%2C1%2C%22pizzicato%22%5D%7D" alt="Pizzicato Example">
+        </div>
+
+        <!-- Arco -->
+        <div class="container" id="arco">
+            <p class="header">Arco</p>
+            <p class="descriptor">Perform the notes by using the bow.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22G4%22%2C2%2C%22arco%22%5D%2C%222%22%3A%5B%22B4%22%2C2%2C%22arco%22%5D%7D" alt="Arco Example">
+        </div>
+
+        <!-- Tremolo -->
+        <div class="container" id="tremolo">
+            <p class="header">Tremolo</p>
+            <p class="descriptor">Continuously play the note with the bow rapidly to produce a trembling effect.</p>
+            <img src="http://localhost:3000/music?json=%7B%221%22%3A%5B%22C4%22%2C2%2C%22tremolo%22%5D%2C%222%22%3A%5B%22G4%22%2C2%2C%22tremolo%22%5D%7D" alt="Tremolo Example">
+        </div>
+
+        <!-- Other Articulations -->
+        <div class="container" id="other-articulations">
+            <p class="header">Other Articulations</p>
+            <div class="articulation-list">
+                <div class="articulation-item">
+                    <p class="item-header">Vibrato</p>
+                    <p class="item-text">A slight "wobbling" of the pitch of a note for expression. An important vocal technique as well as for instruments.</p>
+                </div>
+                
+                <div class="articulation-item">
+                    <p class="item-header">Tonguing</p>
+                    <p class="item-text">The technique used by brass and wind players. Faster rhythms often require the technique of double or triple tonguing.</p>
+                </div>
+                
+                <div class="articulation-item">
+                    <p class="item-header">Bend</p>
+                    <p class="item-text">Guitarists can use their fingers to bend the string from one note to another. Brass and wind players can also do this with different mouth shape and air pressure.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slides Section -->
+        <div class="container" id="slides">
+            <p class="header">Slides</p>
+            <div class="articulation-list">
+                <div class="articulation-item">
+                    <p class="item-header">Glissando</p>
+                    <p class="item-text">A dramatic slide between a wide range of notes. For example, running the fingers along the strings of a harp.</p>
+                </div>
+                
+                <div class="articulation-item">
+                    <p class="item-header">Portamento</p>
+                    <p class="item-text">A smooth slide between two notes. Used frequently by singers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

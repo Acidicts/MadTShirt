@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 1rem;
     background: linear-gradient(135deg, var(--col_1) 0%, var(--col_3) 100%);
     min-height: 100vh;
 }
@@ -12,7 +12,7 @@ body {
 nav {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
@@ -37,11 +37,14 @@ li:hover {
 }
 
 #container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 3rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
 .container {
@@ -50,17 +53,91 @@ li:hover {
     align-items: center;
     justify-content: flex-start;
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-    max-width: 250px;
     width: 100%;
+    min-height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
-/* Make phrase container wider */
+/* Make phrase and compositional devices containers span full width */
 #phrase {
-    max-width: 600px;
+    grid-column: 1 / -1;
+}
+
+/* Compositional devices and melodic movement on same row at bottom */
+#compositional_devices,
+#melodic_movement {
+    grid-column: span 1;
+}
+
+@media (min-width: 900px) {
+    #compositional_devices {
+        grid-column: span 2;
+    }
+    
+    #melodic_movement {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1200px) {
+    #compositional_devices,
+    #melodic_movement {
+        grid-column: span 2;
+    }
+}
+
+/* Make hook/riff and scale/mode half height */
+#hook\/riff,
+#scale\/mode {
+    min-height: 100px;
+    align-self: start;
+}
+
+/* Make countermelody span to fill the remaining space in the row */
+#countermelody {
+    grid-row: span 2;
+}
+
+/* Tricontainer styling */
+#tricontainer {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+#tricontainer > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#tricontainer #countermelody {
+    flex-grow: 1;
+}
+
+@media (min-width: 900px) {
+    #compositional_devices {
+        grid-column: span 2;
+    }
+    
+    #melodic_movement {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1200px) {
+    #compositional_devices,
+    #melodic_movement {
+        grid-column: span 2;
+    }
 }
 
 .container:hover {
@@ -69,7 +146,7 @@ li:hover {
 }
 
 .header {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     color: var(--col_3);
@@ -77,10 +154,10 @@ li:hover {
 }
 
 .descriptor {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 400;
     color: #666;
-    margin: 0 0 1.5rem 0;
+    margin: 0 0 1rem 0;
     text-align: center;
     line-height: 1.5;
 }
@@ -119,7 +196,32 @@ img {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-#melodic_movement{
+/* Adjust font size for content-heavy cards */
+#melodic_movement,
+#compositional_devices {
+    font-size: 0.95rem;
+}
+
+#melodic_movement {
     font-size: 0.75rem;
-    max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
+    #melodic_movement {
+        grid-column: 1;
+    }
+    
+    #tricontainer {
+        flex-direction: column;
+    }
+    
+    #tricontainer > div:first-child {
+        width: 100%;
+    }
 }
