@@ -1,0 +1,21 @@
+:root {
+    --col_1: #EFFFDF;
+    --col_2: #CEFFC4;
+    --col_3: #B9D4FF;
+    --col_4: #ff9aff;
+    --col_5: #B1E6F3;
+    --col_6: #FF8ECC;
+    --col_7: #FFCB97;
+    --col_8: #FED8EC;
+    --col_9: #CAFFF0;
+
+    --col_1-accent: #B3BFA7;
+    --col_2-accent: #9BBF93;
+    --col_3-accent: #8AB8E6;
+    --col_4-accent: #EAB8E4;
+    --col_5-accent: #8ED6E1;
+    --col_6-accent: #FF6DAA;
+    --col_7-accent: #FFB86D;
+    --col_8-accent: #FEC4D8;
+    --col_9-accent: #A8FFE0;
+}
